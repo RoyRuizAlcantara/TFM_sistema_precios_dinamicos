@@ -4,17 +4,16 @@ import random
 from datetime import datetime, timedelta
 import os
 
-# Inicializar Faker para datos en español de México
 fake = Faker('es_MX')
 
-# --- CONFIGURACIÓN ---
+# CONFIGURACIÓN
 NUM_STORES = 10
-NUM_SKUS = 50  # Zapatos deportivos
+NUM_SKUS = 50  
 NUM_SALES_RECORDS = 5000
 START_DATE = datetime(2023, 1, 1)
 END_DATE = datetime(2023, 12, 31)
 
-# --- RUTAS DE SALIDA ---
+# RUTAS DE SALIDA
 INTERNAL_DATA_PATH = '../../../data/synthetic_data/internal/'
 EXTERNAL_DATA_PATH = '../../../data/synthetic_data/external/'
 
@@ -23,7 +22,7 @@ os.makedirs(INTERNAL_DATA_PATH, exist_ok=True)
 os.makedirs(EXTERNAL_DATA_PATH, exist_ok=True)
 
 
-# --- 1. GENERACIÓN DE DATOS INTERNOS ---
+# 1. GENERACIÓN DE DATOS INTERNOS
 
 # a. Catálogo de Productos
 print("Generando catálogo de productos...")
@@ -81,7 +80,7 @@ df_sales.to_csv(os.path.join(INTERNAL_DATA_PATH, 'daily_sales.csv'), index=False
 print(f"Ventas guardadas en: {os.path.join(INTERNAL_DATA_PATH, 'daily_sales.csv')}")
 
 
-# --- 2. GENERACIÓN DE DATOS EXTERNOS (SIMULADOS) ---
+# 2. GENERACIÓN DE DATOS EXTERNOS (SIMULADOS)
 
 # a. Precios de la Competencia (simulando un JSON de scraping)
 print("\nGenerando datos de competencia...")
