@@ -3,10 +3,7 @@ import re
 
 
 def clean_and_parse_price(price_str):
-    """
-    Limpia strings de precios (ej. "$1,699.00") para convertirlos a float.
-    Esta versión es robusta y elimina cualquier caracter no numérico.
-    """
+  
     if price_str is None:
         return None
 
