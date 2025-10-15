@@ -7,7 +7,7 @@ def clean_and_parse_price(price_str):
     if price_str is None:
         return None
 
-    # Usa una expresión regular para eliminar todo lo que no sea un dígito o un punto.
+    # expresión regular para eliminar todo lo que no sea un dígito o un punto.
     cleaned_str = re.sub(r'[^\d.]', '', str(price_str))
 
     # Si después de limpiar no queda nada, retornamos None.
@@ -21,5 +21,5 @@ def clean_and_parse_price(price_str):
 
         return float(cleaned_str)
     except (ValueError, TypeError):
-        # Si algo falla en la conversión final, retornamos None.
+        # Si algo falla en la conversión, retornamos None.
         return None
