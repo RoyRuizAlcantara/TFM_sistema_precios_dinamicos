@@ -6,9 +6,7 @@ from src.modeling.pricing_model import recommend_prices
 
 
 def run_pipeline():
-    """
-    Ejecuta el pipeline de datos completo, definiendo y pasando la ruta raíz del proyecto.
-    """
+    
     PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
     print("==============================================")
